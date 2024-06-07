@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('../images/matching-game.jpeg') center center / cover no-repeat;
+  z-index: -1;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-title {
+  color: #8b5e87;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.difficulty-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.difficulty-buttons button {
+  margin: 0 10px;
+}
+
+p {
+  color: #850F8D;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9e0e3; 
+  display: inline-block; 
+  padding: 10px; 
+}
+
+#gameArea {
+  position: relative;
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+  border: 2px solid #af7ea9;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+#leftSide, #rightSide {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+}
+
+#rightSide {
+  left: 50%;
+  border-left: 1px solid #8b5e87;
+  border-radius: 0 20px 20px 0;
+}
+
+footer {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #f9e0e3;
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  color: #850F8D;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9e0e3; 
+  display: inline-block; 
+  padding: 10px; 
+  margin: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-button {
+  padding: 10px 20px;
+  background-color: #af7ea9;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 10px;
+}
+
+#clickCounter {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  color: #000;
+}

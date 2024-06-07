@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Matching Game</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-content">
+        <div class="logo-title">Matching Game</div>
+        <div class="difficulty-buttons">
+          <button class="modal-button" onclick="setDifficulty('easy')">Easy</button>
+          <button class="modal-button" onclick="setDifficulty('normal')">Normal</button>
+          <button class="modal-button" onclick="setDifficulty('hard')">Hard</button>
+        </div>
+      </div>
+    </nav>
+    <p>Click on the extra smile cloud on the left!</p>
+  </header>
+  <div id="gameArea">
+    <div id="leftSide"></div>
+    <div id="rightSide"></div>
+  </div>
+  <div id="clickCounter">Clicks: 0</div> 
+
+  <div id="gameOverModal" class="modal">
+    <div class="modal-content">
+      <h2>Game Over!!</h2>
+      <p id="scoreDisplay"></p>
+      <div class="modal-buttons">
+        <button class="modal-button" onclick="restartGame()">Restart</button>
+        <button class="modal-button" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Created and developed by: Gabriella Andrade | 2024</p>
+  </footer>
+  
+  <script src="js/script.js"></script>
+</body>
+</html>

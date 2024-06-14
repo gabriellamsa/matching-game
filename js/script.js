@@ -2,6 +2,9 @@ let numberOfClouds = 0;
 let score = 0;
 let difficultyMultiplier = 0;
 let clickCount = 0; 
+let currentDifficulty = 'easy';
+let gameOverImage = 'images/game-over-cloud.png'; // game over cloud
+
 
 const theLeftSide = document.getElementById("leftSide");
 const theRightSide = document.getElementById("rightSide");
@@ -10,6 +13,7 @@ const scoreDisplay = document.getElementById("scoreDisplay");
 const clickCounter = document.getElementById("clickCounter"); 
 
 function setDifficulty(difficulty) {
+  currentDifficulty = difficulty; // atualiza o nível de dificuldade atual
   if (difficulty === 'easy'){
     difficultyMultiplier = 3;
     numberOfClouds = 3;
@@ -86,6 +90,9 @@ function gameOver(event) {
   event.stopPropagation();
   scoreDisplay.innerText = `Score: ${score}`;
   gameOverModal.style.display = "flex";
+
+    // altera a imagem da última nuvem para a imagem de game over
+    theLeftSide.lastChild.src = gameOverImage;
 }
 
 function closeModal() {
@@ -97,7 +104,7 @@ function restartGame() {
   score = 0;
   clickCount = 0; 
   gameOverModal.style.display = "none";
-  setDifficulty('easy');
+  setDifficulty(currentDifficulty); // usa o nível de dificuldade atual
 }
 
 window.addEventListener('load', restartGame);

@@ -40,7 +40,6 @@ function generateClouds() {
   const gameArea = document.getElementById("gameArea");
   const maxWidth = gameArea.clientWidth / 2 - 50; 
   const maxHeight = gameArea.clientHeight - 50; 
-  const leftSideImages = theLeftSide.cloneNode(true);
 
   for (let i = 0; i < numberOfClouds; i++) {
     let randomTop = Math.floor(Math.random() * maxHeight);
@@ -56,6 +55,8 @@ function generateClouds() {
 
     theLeftSide.appendChild(cloud);
   }
+
+  const leftSideImages = theLeftSide.cloneNode(true); 
 
   leftSideImages.removeChild(leftSideImages.lastChild);
   theRightSide.appendChild(leftSideImages);
